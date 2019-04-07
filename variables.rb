@@ -19,3 +19,7 @@ puts ": #{d}"
 puts ": #{e}"
 puts ": #{f}"
 puts ": #{g}"
+
+puts "\n#################### Concatenating In Ruby ####################\n"
+
+puts "something something something [#{a}] , [#{b}] , [#{c}] "
