@@ -4,10 +4,9 @@ class Animal
     attr_accessor :name, :age, :trait
 end
 
-animal_1 = Animal.new
-
+animal_1      = Animal.new
 animal_1.name = "Alan"
-animal_1.age   = 20
+animal_1.age  = 20
 
 puts "#{animal_1.name}"
 puts "#{animal_1.age}"
@@ -34,9 +33,3 @@ fish_1.trait = "Dodgey leg"
 fish_1.fins  = "yes he has fins" 
 
 puts "#{fish_1.fins}"
-
-puts "#################### Finding What Class An Object Belongs To ####################"
-
-puts "#{Cat.class}"
-puts "#{person_1.class}"
-puts "#{fish_1.class}"

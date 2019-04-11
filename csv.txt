@@ -1,0 +1,4 @@
+cat,tiger,meow,100
+airplane,bird,200
+tree,grove,400
+sand,beach,fish,50
