@@ -95,7 +95,7 @@ end
 
 puts "- - - - - - - - - - - - - - "
 
-y = d.scan(/\d{2}\s+(.*.log)/i)
+y = d.scan(/\d{2}\s+(.*.log)/)
 
 y.each do | entry |
   puts "#{entry} < - - - - - - - -"
