@@ -1,4 +1,5 @@
 # JSON Parsing example
+
 require "json"
 
 string = '{"desc":{"someKey":"someValueToSomeKey","anotherKey":"value"},"main_item":{"stats":{"a":8,"b":12,"c":10}}}'
@@ -9,7 +10,7 @@ puts parsed_string ["main_item"]["stats"]["a"]
 
 # Read JSON from a file, iterate over objects
 
-file = open("shops.json")
+file = open("helper_files/shops.json")
 json = file.read
 
 parsed = JSON.parse(json)

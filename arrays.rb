@@ -1,6 +1,6 @@
 puts "#################### Arrays ####################"
 
-array1 = [ "derp" , 6 , 1.0 ]
+array1 = [ "derp" , 6 , 1.0 , nil ]
 
 puts array1
 puts array1[1]

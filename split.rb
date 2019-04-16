@@ -51,7 +51,7 @@ print array
 puts "##########################################################"
 
 # Open this file (change file name for your program).
-IO.foreach("csv.txt") do |line|
+IO.foreach("helper_files/csv.txt") do |line|
 
     # Remove trailing whitespace.
     line.chomp!

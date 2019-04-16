@@ -2,37 +2,35 @@ puts "\n#################### Cycling Through Ruby Arrays And Hashs #############
 
 a = [1,2,3]
 
-puts a
-
 a.each do |item|
 	puts "#{item}"
 end
 
-puts "================================================================\n"
+puts "\n\n================================================================\n"
 
 shop = 
 {
-	"food" => "cheese"
+  "dairy" => "cheese",
+  "meat"  => "beef"
 }
-
-puts shop
 
 shop.each do |k,v| 
 	puts "#{k} -----> #{v}"
 end
 
-puts "================================================================\n"
+puts "\n\n================================================================\n"
 
-hash = 	{
-			'qwe' => ['JAHAHAHAH'],
-			'rty' => 
+w = 	
+{
+  'qwe' => ['JAHAHAHAH'],
+	'rty' => 
 				{
-					'foo' 	=> 'this', 
-					'cool' 	=> 'guy'
+				  'foo'  => 'this', 
+					'cool' => 'guy'
 				}
 		}
 
-hash.each do |k,v|
+w.each do |k,v|
 	puts k
 	puts v
 	puts "xxxxxxxxxxxxxxx"
@@ -42,11 +40,12 @@ hash.each do |k,v|
 	puts "xxxxxxxxxxxxxxx"
 end
 
-puts "================================================================\n"
+puts "\n\n================================================================\n"
 
-more_nested_array = [["hello", ["world", "new york"]], ["love", "ruby"]]
+p = [["hello", ["world", "new york"]], ["love", "ruby"]]
 
-more_nested_array.each do |element|
+p.each do |element|
+  puts element
   element.each do |inner_element|
     if inner_element.is_a?(Array)
       inner_element.each do |third_layer_element|
@@ -56,28 +55,35 @@ more_nested_array.each do |element|
   end
 end
 
-puts "================================================================\n"
+puts "\n\n================================================================\n"
 
-holiday_supplies = {
-  "winter" => { 
+holiday_supplies = 
+{
+  "winter" => 
+  { 
     "Christmas" => ["lights", "tree"],
     "New Years" => "champagne glasses"
   },
-  "summer" => {
+  "summer" => 
+  {
     "July Fourth" => ["BBQ", "flags"]
   },
-  "spring" => {
+  "spring" => 
+  {
     "Memorial Day" => "BBQX"
   },
   "fall" => {
     "Labor Day" => "hot dogs"
   }
 }
-
-puts holiday_supplies
  
 holiday_supplies.each do |key, value|
   value.each do |key2, value2|
     puts value2
   end
 end
+
+
+
+
+

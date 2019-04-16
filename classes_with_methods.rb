@@ -1,7 +1,7 @@
 puts "#################### Classes With Methods ####################"
 
 class Person
-  
+
     def talk
       puts "Hello how are you? :D"
     end
