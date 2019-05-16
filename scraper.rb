@@ -5,14 +5,19 @@ require "open-uri"
 def scrapeLocalPage(x)
 	doc = Nokogiri::HTML(open(x)) 
 	puts doc   # => Nokogiri::HTML::Document
+	puts "- - - - - - - - - - - - - - - - - - -"
 end
+
+scrapeLocalPage("helper_files/file.html")
 
 
 def scrapeOnlinePage(x)
 	page = Nokogiri::HTML(open(x))   
 	puts page.class   # => Nokogiri::HTML::Document
+	puts "- - - - - - - - - - - - - - - - - - - - - - - - - -"
 end
 
+scrapeOnlinePage("https://en.wikipedia.org/wiki/County_Cork")
 
 def scrapeOnlinePageRest(x)
 	page = Nokogiri::HTML(RestClient.get(x))
@@ -43,31 +48,17 @@ def scrapeOnlinePageRest(x)
 	# puts "- - - - - - - "
 end
 
-scrapeLocalPage("helper_files/file.html")
-
-puts "- - - - - - - - - - - - - - - - - - - - - - - - - -"
-
-scrapeOnlinePage("https://en.wikipedia.org/wiki/County_Cork")
-
-puts "- - - - - - - - - - - - - - - - - - - - - - - - - -"
 
 scrapeOnlinePageRest("http://ruby.bastardsbook.com/files/hello-webpage.html")
-
-
-
-
-
-
-
-
 
 
 # set URL to point to where the page exists
 page = Nokogiri::HTML(open("https://en.wikipedia.org/wiki/County_Cork"))
 links = page.css("a")
-puts links.length   # => 6
-puts links[0]   # => Click here
-puts links[0]["href"] # => http://www.google.com
+puts links.length
+puts links.last["href"]
+puts links[0]["href"]
+puts links
 
 
 
